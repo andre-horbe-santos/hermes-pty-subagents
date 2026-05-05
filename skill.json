@@ -1,0 +1,17 @@
+{
+  "name": "pty-subagents",
+  "version": "1.0.0",
+  "description": "Orquestra Claude Code, Gemini CLI e OpenAI Codex como subagentes via PTY interativo",
+  "entry": "orchestrator.js",
+  "tools": [
+    {
+      "name": "run_subagent",
+      "description": "Envia um prompt para um ou mais subagentes CLI (claude, gemini, codex) via PTY",
+      "parameters": {
+        "prompt": "string — tarefa a ser executada",
+        "mode": "parallel | race | single (default: parallel)",
+        "agent": "claude | gemini | codex (só para mode=single)"
+      }
+    }
+  ]
+}
